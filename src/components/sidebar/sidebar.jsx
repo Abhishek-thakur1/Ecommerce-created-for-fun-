@@ -28,6 +28,13 @@ const Sidebar = () => {
                         <p>Accessories</p>
                     </ListItem>
                 </List>
+                <Dis>
+                    <p>invite a friend and a get discount of <span>10%</span></p>
+                </Dis>
+                <Auth>
+                    <img src={require('../../assets/icons/logout.png')} alt="" />
+                    <p>Log Out</p>
+                </Auth>
             </Container>
         </Wrapper>
     )

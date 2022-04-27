@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react'
 
 
-import './slideA.css';
+import './slide.css';
 
 const SideAbout = ({Slides}) => {
 
@@ -53,12 +53,12 @@ const SideAbout = ({Slides}) => {
                 ))}
             </div>
 
-            <div className="slideshowDots">
+            {/* <div className="slideshowDots">
                 {images.map((_, idx) => (
                     <div key={idx} className={`slideshowDot${index === idx ? " active" : ""}`} 
                     onClick={() => {setIndex(idx);}}></div>
                 ))}
-            </div>
+            </div> */}
         </div>
     )
 }

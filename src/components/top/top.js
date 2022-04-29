@@ -8,6 +8,7 @@ export const Wrapper = styled.div`
     display: flex;
     align-items: center;
     position: fixed;
+    z-index:9999;
 `;
 export const Container = styled.div`
     background-color: var(--bg-color);

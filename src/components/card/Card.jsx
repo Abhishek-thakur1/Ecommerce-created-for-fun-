@@ -1,8 +1,38 @@
 import React from 'react'
+import './Card.css'
 
-const Card = () => {
+const Card = ({props}) => {
     return (
-        <div>Card</div>
+        <div class="container page-wrapper">
+            <div class="page-inner">
+                <div class="row">
+                    <div class="el-wrapper">
+                        <div class="box-up">
+                            <img class="img" src={props.photo} alt="Image not loaded"/>
+                            <div class="img-info">
+                                <div class="info-inner">
+                                    <span class="p-name">{ props.title}</span>
+                                    <span class="p-company">{ props.content}</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-down">
+                            <div class="h-bg">
+                                <div class="h-bg-inner"></div>
+                            </div>
+
+                            <a class="cart" href="#">
+                                <span class="price">$120</span>
+                                <span class="add-to-cart">
+                                    <span class="txt">Add in cart</span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     )
 }
 

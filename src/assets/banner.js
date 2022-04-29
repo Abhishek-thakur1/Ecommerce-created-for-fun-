@@ -13,5 +13,9 @@ export const s4 =
 export const s5 =
     "https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy9xcXFxYmVhcmRvLWhlbXAtcmFuZ2UtbmV3LWxhdW5jaC1iYW5uZXItMS0zNzc0Ny5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsiZml0Ijoib3V0c2lkZSJ9fX0=";
 
+export const s6 = "https://m.media-amazon.com/images/I/61S1vOPq9tL._SX3000_.jpg";
+
+export const s7 = "https://m.media-amazon.com/images/I/616K6tG5MHL._SX3000_.jpg";
+
 
 

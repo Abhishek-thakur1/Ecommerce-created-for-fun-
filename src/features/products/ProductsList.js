@@ -1,30 +1,29 @@
 import React from "react";
-import { useSelector } from "react-redux"
-import styled from'styled-components'
+import { useSelector, useDispatch } from "react-redux";
+// import { useHistory } from "react-router";
+import Spinner from '../../components/spinner/Spinner.jsx'
+import { Wrapper } from './ProductsLists-styles'
+import {useGetAllProductsQuery } from './productAPI'
 import Card from '../../components/card/Card.jsx'
 
 
 export const ProductsList = () => {
 
-    // styles...
-    const Wrapper = styled.div`
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        width: 100%;
-        flex-wrap: wrap;
-    `
+    const { items: products, status } = useSelector((state) => state.products);
+    const dispatch = useDispatch();
+    // const history = useHistory();
 
+    const { data, error, isLoading } = useGetAllProductsQuery();
+    console.log("Api", isLoading);
 
-    const products = useSelector(state => state.products)
-
-    const renderedProducts = products.map(product => (
-        <Card props={ product} key={product.id}/>
-    ))
+    // const handleAddToCart = (product) => {
+    //     dispatch(addToCart(product));
+    //     history.push("/cart");
+    // };
 
     return (
         <Wrapper>
-            {renderedProducts}
+            {isLoading ? <Spinner /> :data && data?.map((product) => (<Card product={ product} key={product.id}/>))}
         </Wrapper>
     )
 

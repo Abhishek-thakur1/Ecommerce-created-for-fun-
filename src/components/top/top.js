@@ -42,10 +42,23 @@ export const Cart = styled.div`
     /* margin-left:60rem; */
     margin-right:7rem ;
     cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     img {
         height: 3.5rem;
         width: 3.5rem;
+    }
+
+    .quantity{
+        position: absolute;
+        top: 30%; 
+        left: 40%;
+        font-size: 9px;
+        font-weight: bold;
+        user
     }
 `;
 export const Buttons = styled.div`

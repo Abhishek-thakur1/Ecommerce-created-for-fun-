@@ -96,6 +96,7 @@ export const Auth = styled.div`
     display: flex;
     align-items: center;
     margin-top: 5.5rem;
+    /* display: none; */
     cursor: pointer;
 
     img{

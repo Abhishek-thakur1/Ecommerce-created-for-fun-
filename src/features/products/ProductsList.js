@@ -11,15 +11,10 @@ export const ProductsList = () => {
 
     const { items: products, status } = useSelector((state) => state.products);
     const dispatch = useDispatch();
-    // const history = useHistory();
 
     const { data, error, isLoading } = useGetAllProductsQuery();
     console.log("Api", isLoading);
 
-    // const handleAddToCart = (product) => {
-    //     dispatch(addToCart(product));
-    //     history.push("/cart");
-    // };
 
     return (
         <Wrapper>

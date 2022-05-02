@@ -49,10 +49,15 @@ export const ListItem = styled.li`
     padding:.7rem 0rem .7rem 1.5rem ;
     border-top-left-radius: 21px;
     border-bottom-left-radius: 11px;
+    cursor: pointer;
     transition: all 0.2s;
 
+    &.active{
+        background-color: var(--dark-grey);
+    }
+
     &:hover{
-        background-color: var(--dark-grey); 
+        background-color: var(--hover); 
     }
 
     img{

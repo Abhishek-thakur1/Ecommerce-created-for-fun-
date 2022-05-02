@@ -1,8 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { NavLink } from "react-router-dom";
 import { Wrapper,Container, Logo, List, ListItem, Dis, Auth } from './sidebar.js'
 
 
 const Sidebar = () => {
+
+    const [isClicked, setIsClicked] = useState(false)
+
+    const lists = document.querySelectorAll('.list')
+    function activeLink() {
+        lists.forEach((item) => item.classList.remove('active'));
+        this.className.add('active')
+    }
+    // lists.forEach((item) =>item.addEventListener('onclick', activeLink))
+
     return (
         <Wrapper>
             <Container>
@@ -11,19 +22,19 @@ const Sidebar = () => {
                     <p>shopee.</p>
                 </Logo>
                 <List>
-                    <ListItem>
+                    <ListItem className='list active' onClick={() => activeLink()}>
                         <img src={require('../../assets/icons/new.png')} alt="" />
                         <p>New in</p>
                     </ListItem>
-                    <ListItem>
+                    <ListItem className='list'  onClick={() => activeLink()}>
                         <img src={require('../../assets/icons/men-clothing.png')} alt="" />
                         <p>Clothing</p>
                     </ListItem>
-                    <ListItem>
+                    <ListItem className='list'  onClick={() => activeLink()}>
                         <img src={require('../../assets/icons/men-shoes.png')} alt="" />
                         <p>Shoes</p>
                     </ListItem>
-                    <ListItem>
+                    <ListItem className='list'  onClick={() => activeLink()}>
                         <img src={require('../../assets/icons/aceessories-men.png')} alt="" />
                         <p>Accessories</p>
                     </ListItem>

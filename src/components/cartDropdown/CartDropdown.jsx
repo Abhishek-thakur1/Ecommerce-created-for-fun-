@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import CartItem from '../cartItems/CartItems.jsx'
 import './CartDropdown.css'
 
 const CartDropdown = () => {
     const cart = useSelector((state) => state.cart);
+    let navigate = useNavigate();
 
 
     return (
@@ -16,9 +18,7 @@ const CartDropdown = () => {
                 <span className="empty-message">Your cart is empty</span>
             }
         </div>
-        <button 
-            // history.push('/checkout')
-        >CHECKOUT</button>
+        <button onClick={()=>navigate('/checkout')}>CHECKOUT</button>
     </div>
     )
 }

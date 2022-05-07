@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
-import { NavLink } from "react-router-dom";
+
+import {useDispatch} from "react-redux"
 import { Wrapper,Container, Logo, List, ListItem, Dis, Auth } from './sidebar.js'
 
 
 const Sidebar = () => {
+
+    const dispatch = useDispatch()
 
     const [isClicked, setIsClicked] = useState(false)
 

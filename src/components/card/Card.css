@@ -92,6 +92,7 @@ body {
 
 .el-wrapper .info-inner{
   background-color: #fffffffe;
+  /* margin-top: 15px; */
   padding: 2px 0px 2px 0px;
 }
 .el-wrapper .p-desc{

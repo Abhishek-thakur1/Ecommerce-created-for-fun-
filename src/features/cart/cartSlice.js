@@ -63,6 +63,9 @@ const cartSlice = createSlice({
     },
     removeFromCart(state, action) {
         state.cartItems.map((cartItem) => {
+            if (cartItem.id === undefined) {
+                console.log('undefined')
+            }
             if (cartItem.id === action.payload.id) {
                 const nextCartItems = state.cartItems.filter(
                     (item) => item.id !== cartItem.id

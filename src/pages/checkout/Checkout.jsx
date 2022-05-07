@@ -10,9 +10,9 @@ const Checkout = () => {
     const cart = useSelector((state) => state.cart);
     const dispatch = useDispatch()
 
-    useEffect(() => {
-        dispatch(getTotals());
-    }, [cart, dispatch]);
+    // useEffect(() => {
+    //     dispatch(getTotals());
+    // }, [cart, dispatch]);
 
     return (
         <div className="checkout-page">
